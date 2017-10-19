@@ -1,9 +1,9 @@
 /nbproject/
 /nbproject/private/
 .idea/
-/node_modules
-/bower_components
+/1node_modules
+/1bower_components
 /.grunt
 /build
-/distr
+/1distr
 *.pem
