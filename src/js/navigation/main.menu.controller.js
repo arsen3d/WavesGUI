@@ -9,6 +9,7 @@
 
         ctrl.blockHeight = 0;
         ctrl.address = applicationContext.account.address;
+        ctrl.addressQr = 'waves://' + ctrl.address;
 
         function initializeBackupFields() {
             ctrl.seed = applicationContext.account.seed;
@@ -36,11 +37,16 @@
             }
         });
 
+        ctrl.showAddressQr = showAddressQr;
         ctrl.showBackupDialog = showBackupDialog;
         ctrl.showProfileDialog = showProfileDialog;
         ctrl.backup = backup;
 
-        function showProfileDialog () {
+        function showAddressQr() {
+            dialogService.open('#address-qr-modal');
+        }
+
+        function showProfileDialog() {
             $scope.$broadcast(events.NAVIGATION_CREATE_ALIAS, {});
         }
 
